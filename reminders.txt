@@ -1,0 +1,17 @@
+1. First tab = Subscriptions (DONE)
+2. Account information = remove top 3 fields (DONE)
+3. Payment preferences = change name to Billing. content of Credits put here. Content of Billing after credit contents (DONE)
+4. Customer invoice = 3 fields/ Last field named Type. Amount - Type(dropdown) - Description (DONE)
+5. Remove credits tab (DONE)
+6. Billing History + USAepay combined. (DONE)
+7. Get rid of lines (DONE)
+8. Notes under the tab. (DONE)
+9. Billing: Enable add/update/delete credit card (DONE)
+10. USAepay table = add column: Last 4-digit of CC (DONE)
+11. Search on top left sidebar (DONE)
+12. Dropdown search type (DONE)
+13. Company logo at top left together with the company name (DONE)
+14. Outgoing Comm. -> SMS Settings = add table
+15. Outgoing Comm. -> Email Templates
+16. CMR/CSR Account
+17. Customers 

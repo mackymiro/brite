@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Action Queue - Customer Detail Page</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- Plugins -->
+		<link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+		<link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+		<!-- CUSTOM CSS: CUSTOM STYLES SHOULD BE HERE!! -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+			<style>
+
+			.whitespace, .whitespace2, .whitespace3{
+
+				overflow: hidden;
+
+				white-space: nowrap;
+
+				width:700px;
+
+				text-overflow: ellipsis;
+
+
+
+			}
+			
+			.search { position: relative; }
+			.search input { }
+			.search .fa-search { 
+			  
+			  position: absolute;
+			  top: 10px;
+			  left: 7px;
+			  font-size: 20px;
+			}
+
+			
+
+		</style>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<nav class="navbar-default navbar-static-side" role="navigation">
+					<div class="sidebar-collapse">
+						<ul class="nav" id="side-menu">
+							<li class="nav-header">
+								<figure> <img src="img/teltik.png"> </figure>
+								<div class="logo-element">W</div>
+							</li>
+							<li class="search-li">
+								<form action="search.html">
+									<div class="input-group m-b">
+									   <div class="search">
+										<input class="form-control" type="text" placeholder="Enter query, select query type below">
+										<div class="input-group-btn">
+											<span class="fa fa-search"></span>
+											<!--<button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button" aria-expanded="false"><span class="caret"></span></button>
+											<ul class="dropdown-menu">
+											  <li><a href="#"><input type="checkbox" name="" /> ALL</a></li>
+												<li><a href="#"><input type="checkbox" name="" /> Reseller One</a></li>
+												<li><a href="#"><input type="checkbox" name="" /> Reseller Two</a></li>
+												<li><a href="#"><input type="checkbox" name="" /> Reseller Three</a></li>
+											</ul>-->
+										</div>
+										</div>
+									</div>
+								</form>
+							</li>
+							<li class="" style=""><span style="font-color:black;  font-size:11px;" class="nav-label">
+								<button class="btn btn-default btn-xs"><i style="font-size:33px;" class="fa fa-phone" aria-hidden="true"></i></button><button class="btn btn-default btn-xs"><i style="font-size:33px;" class="fas fa-user"></i></button><button class="btn btn-default btn-xs"><i style="font-size:33px;" class="fas fa-microchip"></i></button><button class="btn btn-default btn-xs"><i style="font-size:33px;" class="fab fa-first-order"></i></button><button class="btn btn-default btn-xs"><i style="font-size:33px;" class="fa fa-envelope" aria-hidden="true"></i></button>
+							</span></li>
+							<li>
+								<select name="" class="form-control">
+									<option>ALL</option>
+									<option>Reseller One</option>
+									<option>Reseller Two</option>
+									<option>Reseller Three</option>
+								</select>
+							</li>
+							<li><a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a></li>
+							<li class=""> <a href="customer-detail-page.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Customer Detail Page</span></a> </li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Action Queues</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									 <li><a href="action-shipping.html"><i class="fas fa-truck"></i>Shipping - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">0</span></a></li>
+									<li><a href="action-activation.html"><i class="fas fa-power-off"></i>Activation - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">2</span></a></li>
+									<li><a href="action-cloud-activation.html"><i class="fas fa-cloud"></i>Cloud Activation - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">1</span></a></li>
+									<li><a href="action-porting.html"><i class="fas fa-phone-square"></i>Porting - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">1</span></a></li>
+									<li><a href="action-up-downgrade.html"><i class="fas fa-cogs"></i>Up/Downgrade - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">1</span></a></li>
+									<li><a href="action-for-reactivation.html"><i class="fas fa-undo-alt"></i>For Re-activation - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">0</span></a></li>
+									<li><a href="action-completed.html"><i class="fas fa-check-circle"></i>Completed - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">1</span></a></li>
+									<li><a href="action-cancelled.html"><i class="fas fa-ban"></i>Cancelled - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">1</span></a></li>
+									<li><a href="action-final-suspend.html"><i class="fas fa-question-circle"></i>Final Suspend - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">0</span></a></li>
+									<li><a href="action-closed.html"><i class="fas fa-times-circle"></i>Closed - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">2</span></a></li>
+									<li><a href="action-deal-verification.html"><i class="fas fa-sticky-note"></i>Deal Verification - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">2</span></a></li>
+									<li><a href="action-ban-accounts.html"><i class="fas fa-ban"></i>Ban Accounts - <span style="border-radius:10px; background:black; padding:3px; width:6px; height:1px; font-color:black;">2</span></a></li>
+
+								</ul>
+							</li>
+							<li> <a href="cmr-csr-accounts.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">CMR/CSR Accounts</span></a> </li>
+							<li class="active"> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Customers</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="customers-accounts.html">Accounts</a></li>
+									<li><a href="customers-previous-emails.html">Previous E-mails</a></li>
+									<li><a href="customers-notes.html">Notes</a></li>
+									<li><a href="customers-subscriptions.html">Subscriptions</a></li>
+									<li class="active"><a href="business-verification-queue.html">Business Verification Queue </a></li>
+									<li class=""><a href="add-new-report.html">Add New Report </a></li>
+									<li><a href="customers-porting-requests.html">Porting Requests</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="products.html">Products</a></li>
+									<li><a href="products-ban-accounts.html">BAN Accounts</a></li>
+									<li><a href="products-phones.html">Phones</a></li>
+									<li><a href="products-default-imei.html">Default IMEI</a></li>
+									<li><a href="products-create-product.html">Create Product</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Website Content</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="website-device-slider.html">Device Slider</a></li>
+									<li><a href="website-announcements.html">Announcements</a></li>
+									<li><a href="website-blogs.html">Blogs</a></li>
+									<li><a href="website-blog-categories.html">Blog Categories</a></li>
+									<li><a href="website-plans.html">Plans</a></li>
+									<li><a href="website-site-general-info.html">Site General Info</a></li>
+									<li><a href="website-homepage-texts.html">Homepage Texts</a></li>
+									<li><a href="website-terms-conditions.html">Terms &amp; Conditions</a></li>
+									<li><a href="website-privacy-policy.html">Privacy Policy</a></li>
+									<li><a href="website-faqs.html">FAQs</a></li>
+									<li><a href="website-faq-category.html">FAQ Category</a></li>
+									<li><a href="website-why-teltik.html">Why Teltik?</a></li>
+									<li><a href="website-cloud-features.html">Cloud Features</a></li>
+									<li><a href="website-disclaimer.html">Disclaimer</a></li>
+									<li><a href="website-snippets.html">Snippets</a></li>
+									<li><a href="website-seo.html">SEO</a></li>
+									<li><a href="website-plans-header.html">Plans Header</a></li>
+									<li><a href="website-contact-requests.html">Contact Requests</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Orders/Cart/Billing</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="ocb-orders.html">Orders</a></li>
+									<li><a href="ocb-cart-items.html">Cart Items</a></li>
+									<li><a href="ocb-billing-history.html">Billing History</a></li>
+									<li><a href="ocb-invoices.html">Invoices</a></li>
+									<li><a href="ocb-next-invoice-log.html">Next Invoice Log</a></li>
+									<li><a href="ocb-state-provinces.html">State Provinces</a></li>
+									<li><a href="ocb-countries.html">Countries</a></li>
+									<li><a href="ocb-usaepay-transactions.html">USAePAY Transactions</a></li>
+									<li><a href="ocb-usaepay-aux-log.html">USAePAY Aux Log</a></li>
+									<li><a href="ocb-coupons.html">Coupons</a></li>
+									<li> <a href="#">Logs<span class="fa arrow"></span></a>
+										<ul class="nav nav-third-level">
+											<li><a href="ocb-logs-general.html">General</a></li>
+											<li><a href="ocb-logs-postpay-charges.html">Postpay Charges</a></li>
+										</ul>
+									</li>
+									<li><a href="ocb-add-recurring-discount.html">Add Recurring Discount</a></li>
+									<li><a href="ocb-postpay-csv-importer.html">Postpay CSV Importer</a></li>
+									<li><a href="ocb-postpay-charges.html">Postpay Charges</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Outgoing Comm.</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="oc-sms-settings.html">SMS Settings</a></li>
+									<li><a href="oc-sms-templates.html">SMS Templates</a></li>
+									<li><a href="oc-email-templates.html">E-mail Templates</a></li>
+									<li><a href="oc-outgoing-mail.html">Outgoing Mail</a></li>
+									<li><a href="oc-outgoing-sms.html">Outgoing SMS</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Affiliate System</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="affiliate-system-program.html">Program</a></li>
+									<li><a href="affiliate-system-balance-sheet.html">Balance Sheet</a></li>
+									<li><a href="affiliate-system-slideshow-data.html">Slideshow Data</a></li>
+									<li><a href="affiliate-system-offers.html">Offers</a></li>
+									<li><a href="affiliate-system-news.html">News</a></li>
+									<li><a href="affiliate-system-about.html">About</a></li>
+									<li><a href="affiliate-system-claim-credit-requests.html">Claim Credit Requests</a></li>
+									<li><a href="affiliate-system-claimed-affiliate-credit.html">Claimed Affiliate Credit</a></li>
+									<li><a href="affiliate-system-tc.html">T &amp; C</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Reports</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="reports-custom-reports-builder.html">Custom Reports Builder</a></li>
+									<li><a href="reports-sales-tax-report.html">Sales Tax Report</a></li>
+									<li><a href="reports-subscription.html">Subscription</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="admin-general-settings.html">General Settings</a></li>
+									<li><a href="admin-section-editors.html">Section Editors</a></li>
+									<li><a href="admin-code-generator.html">Code Generator</a></li>
+									<li><a href="admin-plugins.html">Plugins</a></li>
+									<li><a href="admin-error-log.html">Error Log</a></li>
+									<li><a href="master-admin-reseller-intake-form.html">Reseller Intake Form</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Master Admin</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									
+									<li><a href="master-admin-manage-resellers.html">Manage Resellers</a></li>
+									<li><a href="master-admin-plugins-integrations.html">Plugins/Integrations</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+			</nav>
+				<div id="page-wrapper" class="gray-bg dashbard-1">
+					<div class="row border-bottom">
+						<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+							<ul class="nav navbar-top-links navbar-right">
+								<li> <a href="login.html"><i class="fa fa-sign-out"></i> Log out</a> </li>
+							</ul>
+						</nav>
+					</div>
+					<!-- PAGE HEADING -->
+					<div class="row wrapper border-bottom white-bg page-heading">
+						<div class="col-lg-12">
+							<h2>Business Verification Queue</h2>
+							<ol class="breadcrumb">
+								<li><a href="index.html">Dashboard</a></li>
+								<li class="active"><strong>Business Verification Queue:</strong></li>
+							</ol>
+						</div>
+					</div>
+					<!-- PAGE CONTENT -->
+					<div class="wrapper wrapper-content">
+							<div class="row">
+								<div class="col-lg-12 margin-md-top">
+									<div class="ibox float-e-margins">
+										<div class="ibox-title">
+											<h5>Business Verification Queue</h5>
+										</div>
+										<div class="ibox-content">
+											<div class="row">
+												<div class="col-md-3">
+													<div class="col-md-6">
+														<label for="search">Search</label>
+														<input type="text" name="search" class="form-control" />
+													</div>
+													<div class="col-md-6">
+														<br>
+														<a href="#">advance search >></a>
+													</div>
+					
+													<div style="clear:both;"></div>
+													<div class="col-md-4">
+													<label for="perpage">Per page</label>
+													<select class="form-control" style="width:100%; "name="perPage">
+														<option value="10">10</option>
+														<option selected="selected" value="25">25</option>
+														<option value="50">50</option>
+														<option value="100">100</option>
+														<option value="250">250</option>
+														<option value="1000">1000</option>
+													</select>
+													</div>
+													<div class="col-md-8">
+													<br>
+													<button class="btn btn-primary">Search</button>
+													<button class="btn btn-primary">Reset</button>
+													</div>
+												</div>
+												<div class="col-md-3 pull-right">
+													<label for="totalrecords">Total Records:3001</label>
+													<div style="clear:both;"></div>
+													<div class="col-md-2">
+														<label>Page</label>
+													</div>
+													<div class="col-md-6">
+														<input type="text" name="" class="form-control" />
+													</div>
+													<div class="col-md-4">
+														<label>of 121</label>
+													</div>
+													<div style="clear:both;"></div>
+													<br>
+													<a href="#"><< Prev page | Next page >></a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<table id="active-pending-lines" class="table table-striped table-bordered ">
+													<thead>
+															<tr>
+																<td>Status</td>
+																<td>Agent</td>
+																<td>Date</td>
+																<td>First Name</td>
+																<td>Last Name</td>
+																<td>Email</td>
+																<td>Signed Up</td>
+																<td>Customer Number</td>
+																<td>Action</td>
+															</tr>
+													</thead>
+												<tbody>
+													<tr>
+														<td>Active</td>
+														<td>Macky</td>
+														<td>2018-06-02</td>
+														<td>Macky</td>
+														<td>Miro</td>
+														<td>ask.macky.miro@gmail.com</td>
+														<td>Yes</td>
+														<td>12345</td>
+														<td>
+															<div class="dropdown">
+															 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																Action
+															  </button>
+															  <div style="padding:10px;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																
+																<a class="dropdown-item" href="#">Modify</a><br>
+																<a class="dropdown-item" href="#">Delete</a>
+															  </div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Active</td>
+														<td>Macky</td>
+														<td>2018-06-02</td>
+														<td>Macky</td>
+														<td>Miro</td>
+														<td>ask.macky.miro@gmail.com</td>
+														<td>Yes</td>
+														<td>12345</td>
+														<td>
+															<div class="dropdown">
+															 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																Action
+															  </button>
+															  <div style="padding:10px;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																
+																<a class="dropdown-item" href="#">Modify</a><br>
+																<a class="dropdown-item" href="#">Delete</a>
+															  </div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Active</td>
+														<td>Macky</td>
+														<td>2018-06-02</td>
+														<td>Macky</td>
+														<td>Miro</td>
+														<td>ask.macky.miro@gmail.com</td>
+														<td>Yes</td>
+														<td>12345</td>
+														<td>
+															<div class="dropdown">
+															 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																Action
+															  </button>
+															  <div style="padding:10px;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																
+																<a class="dropdown-item" href="#">Modify</a><br>
+																<a class="dropdown-item" href="#">Delete</a>
+															  </div>
+															</div>
+														</td>
+													</tr>
+													
+												</tbody>
+										</table>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="col-md-3">
+														<select class="form-control">
+															<option>Erase selected</option>
+															<option>Admin: Edit Section</option>
+															<option>Admin: Code Generator</option>
+															<option>Create Mailing List(from search results)</option>
+														</select>
+														<br>
+														<button class="btn btn-primary">Go</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+		</div>
+		<!-- Mainly scripts -->
+			<script src="js/jquery-2.1.1.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+			<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+			<!-- Custom and plugin javascript -->
+			<script src="js/inspinia.js"></script>
+			<script src="js/plugins/pace/pace.min.js"></script>
+			<!-- Plugins -->
+			<script src="js/plugins/dataTables/datatables.min.js"></script>
+			<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+			<script src="js/plugins/switchery/switchery.js"></script>
+			<script type="text/javascript" src="js/custom.js"></script>
+	</body>
+	
+</html>

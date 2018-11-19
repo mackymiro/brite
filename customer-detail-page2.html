@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Action Queue - Customer Detail Page</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- Plugins -->
+		<link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+		<link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+		<!-- CUSTOM CSS: CUSTOM STYLES SHOULD BE HERE!! -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css"> 
+	</head>
+
+		<body>
+			<div id="wrapper">
+				<nav class="navbar-default navbar-static-side" role="navigation">
+					<div class="sidebar-collapse">
+						<ul class="nav" id="side-menu">
+							<li class="nav-header">
+								<figure> <img src="img/teltik.png"> </figure>
+								<div class="logo-element">W</div>
+							</li>
+							<li class="search-li">
+								<form action="search.html">
+									<div class="input-group m-b">
+										<div class="input-group-btn">
+											<button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button" aria-expanded="false"><span class="caret"></span></button>
+											<ul class="dropdown-menu">
+												<li><a href="#">Phone No.</a></li>
+												<li><a href="#">SIM No.</a></li>
+												<li><a href="#">Order No.</a></li>
+												<li><a href="#">E-mail</a></li>
+											</ul>
+										</div>
+										<input class="form-control" type="text" placeholder="Search here"> </div>
+								</form>
+							</li>
+							<li><a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a></li>
+							<li class="active"> <a href="customer-detail-page.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Customer Detail Page</span></a> </li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Action Queues</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="action-shipping.html">Shipping</a></li>
+									<li><a href="action-activation.html">Activation</a></li>
+									<li><a href="action-cloud-activation.html">Cloud Activation</a></li>
+									<li><a href="action-porting.html">Porting</a></li>
+									<li><a href="action-up-downgrade.html">Up/Downgrade</a></li>
+									<li><a href="action-for-reactivation.html">For Re-activation</a></li>
+									<li><a href="action-completed.html">Completed</a></li>
+									<li><a href="action-cancelled.html">Cancelled</a></li>
+									<li><a href="action-final-suspend.html">Final Suspend</a></li>
+									<li><a href="action-closed.html">Closed</a></li>
+									<li><a href="action-deal-verification.html">Deal Verification</a></li>
+									<li><a href="action-ban-accounts.html">Ban Accounts</a></li>
+								</ul>
+							</li>
+							<li> <a href="cmr-csr-accounts.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">CMR/CSR Accounts</span></a> </li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Customers</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="customers-accounts.html">Accounts</a></li>
+									<li><a href="customers-previous-emails.html">Previous E-mails</a></li>
+									<li><a href="customers-notes.html">Notes</a></li>
+									<li><a href="customers-subscriptions.html">Subscriptions</a></li>
+									<li><a href="customers-porting-requests.html">Porting Requests</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Products</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="products.html">Products</a></li>
+									<li><a href="products-ban-accounts.html">BAN Accounts</a></li>
+									<li><a href="products-phones.html">Phones</a></li>
+									<li><a href="products-default-imei.html">Default IMEI</a></li>
+									<li><a href="products-create-product.html">Create Product</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Website Content</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="website-device-slider.html">Device Slider</a></li>
+									<li><a href="website-announcements.html">Announcements</a></li>
+									<li><a href="website-blogs.html">Blogs</a></li>
+									<li><a href="website-blog-categories.html">Blog Categories</a></li>
+									<li><a href="website-plans.html">Plans</a></li>
+									<li><a href="website-site-general-info.html">Site General Info</a></li>
+									<li><a href="website-homepage-texts.html">Homepage Texts</a></li>
+									<li><a href="website-terms-conditions.html">Terms &amp; Conditions</a></li>
+									<li><a href="website-privacy-policy.html">Privacy Policy</a></li>
+									<li><a href="website-faqs.html">FAQs</a></li>
+									<li><a href="website-faq-category.html">FAQ Category</a></li>
+									<li><a href="website-why-teltik.html">Why Teltik?</a></li>
+									<li><a href="website-cloud-features.html">Cloud Features</a></li>
+									<li><a href="website-disclaimer.html">Disclaimer</a></li>
+									<li><a href="website-snippets.html">Snippets</a></li>
+									<li><a href="website-seo.html">SEO</a></li>
+									<li><a href="website-plans-header.html">Plans Header</a></li>
+									<li><a href="website-contact-requests.html">Contact Requests</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Orders/Cart/Billing</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="ocb-orders.html">Orders</a></li>
+									<li><a href="ocb-cart-items.html">Cart Items</a></li>
+									<li><a href="ocb-billing-history.html">Billing History</a></li>
+									<li><a href="ocb-invoices.html">Invoices</a></li>
+									<li><a href="ocb-next-invoice-log.html">Next Invoice Log</a></li>
+									<li><a href="ocb-state-provinces.html">State Provinces</a></li>
+									<li><a href="ocb-countries.html">Countries</a></li>
+									<li><a href="ocb-usaepay-transactions.html">USAePAY Transactions</a></li>
+									<li><a href="ocb-usaepay-aux-log.html">USAePAY Aux Log</a></li>
+									<li><a href="ocb-coupons.html">Coupons</a></li>
+									<li> <a href="#">Logs<span class="fa arrow"></span></a>
+										<ul class="nav nav-third-level">
+											<li><a href="ocb-logs-general.html">General</a></li>
+											<li><a href="ocb-logs-postpay-charges.html">Postpay Charges</a></li>
+										</ul>
+									</li>
+									<li><a href="ocb-add-recurring-discount.html">Add Recurring Discount</a></li>
+									<li><a href="ocb-postpay-csv-importer.html">Postpay CSV Importer</a></li>
+									<li><a href="ocb-postpay-charges.html">Postpay Charges</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Outgoing Comm.</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="oc-sms-settings.html">SMS Settings</a></li>
+									<li><a href="oc-sms-templates.html">SMS Templates</a></li>
+									<li><a href="oc-email-templates.html">E-mail Templates</a></li>
+									<li><a href="oc-outgoing-mail.html">Outgoing Mail</a></li>
+									<li><a href="oc-outgoing-sms.html">Outgoing SMS</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Affiliate System</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="affiliate-system-program.html">Program</a></li>
+									<li><a href="affiliate-system-balance-sheet.html">Balance Sheet</a></li>
+									<li><a href="affiliate-system-slideshow-data.html">Slideshow Data</a></li>
+									<li><a href="affiliate-system-offers.html">Offers</a></li>
+									<li><a href="affiliate-system-news.html">News</a></li>
+									<li><a href="affiliate-system-about.html">About</a></li>
+									<li><a href="affiliate-system-claim-credit-requests.html">Claim Credit Requests</a></li>
+									<li><a href="affiliate-system-claimed-affiliate-credit.html">Claimed Affiliate Credit</a></li>
+									<li><a href="affiliate-system-tc.html">T &amp; C</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Reports</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="reports-custom-reports-builder.html">Custom Reports Builder</a></li>
+									<li><a href="reports-sales-tax-report.html">Sales Tax Report</a></li>
+									<li><a href="reports-subscription.html">Subscription</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="admin-general-settings.html">General Settings</a></li>
+									<li><a href="admin-section-editors.html">Section Editors</a></li>
+									<li><a href="admin-code-generator.html">Code Generator</a></li>
+									<li><a href="admin-plugins.html">Plugins</a></li>
+									<li><a href="admin-error-log.html">Error Log</a></li>
+								</ul>
+							</li>
+							<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Master Admin</span><span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level">
+									<li><a href="master-admin-reseller-intake-form.html">Reseller Intake Form</a></li>
+									<li><a href="master-admin-manage-resellers.html">Manage Resellers</a></li>
+									<li><a href="master-admin-plugins-integrations.html">Plugins/Integrations</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div id="page-wrapper" class="gray-bg dashbard-1">
+					<div class="row border-bottom">
+						<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+							<ul class="nav navbar-top-links navbar-right">
+								<li> <a href="login.html"><i class="fa fa-sign-out"></i> Log out</a> </li>
+							</ul>
+						</nav>
+					</div>
+					<!-- PAGE HEADING -->
+					<div class="row wrapper border-bottom white-bg page-heading">
+						<div class="col-lg-12">
+							<h2>Customer Detail Page</h2>
+							<ol class="breadcrumb">
+								<li><a href="index.html">Dashboard</a></li>
+								<li class="active"><strong>Customer Detail Page</strong></li>
+							</ol>
+						</div>
+					</div>
+					<!-- PAGE CONTENT -->
+					<div class="wrapper wrapper-content">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5>Profile</h5> </div>
+									<div class="ibox-content ibox-info">
+										<div class="row">
+											<div class="col-lg-6"><b>First:</b> Sam</div>
+											<div class="col-lg-6"><b>Last:</b> Milby</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6"><b>Company</b> Teletech</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6"><b>E-mail: </b> sam.milby@teltech.com</div>
+											<div class="col-lg-6"><b>PIN: </b>9928</div> <a href="#" class="ibox-edit-sm" data-toggle="modal" data-target=".edit-profile-modal">Edit</a> </div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5>Account Snapshot</h5> </div>
+									<div class="ibox-content ibox-info">
+										<div class="row">
+											<div class="col-lg-2 col-lg-offset-1 ibox-blue"> <span class="ibox-mini-header">Latest Bill</span>
+												<p class="ibox-mini-content">$30</p>
+											</div>
+											<div class="col-lg-2 ibox-aqua"> <span class="ibox-mini-header">Credits</span>
+												<p class="ibox-mini-content">$30</p>
+											</div>
+											<div class="col-lg-2 ibox-orange"> <span class="ibox-mini-header">Past Due</span>
+												<p class="ibox-mini-content">$30</p>
+											</div>
+											<div class="col-lg-2 ibox-red"> <span class="ibox-mini-header">Total Due</span>
+												<p class="ibox-mini-content">$30</p>
+											</div>
+											<div class="col-lg-2 ibox-green"> <span class="ibox-mini-header">Due Date</span>
+												<p class="ibox-mini-content">Jan. 14, 2018</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="tabs-container">
+									<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="false"><i class="fa fa-file"></i> Subscriptions</a></li>
+										<li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="true"><i class="fa fa-user"></i> Account Information</a></li>
+										<li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="true"><i class="fa fa-credit-card"></i> Billing</a></li>
+										<li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="true"><i class="fa fa-history"></i> Billing History</a></li>
+										<li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="true"><i class="fa fa-envelope-open"></i> E-mail History</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab-1" class="tab-pane active">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-lg-12">
+														<h3 class="mini-header" style="color: #1ab394;"><i class="fa fa-circle"></i> Active Pending Lines</h3> </div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<table id="active-pending-lines" class="table table-striped table-bordered table-hover">
+															<thead>
+																<tr>
+																	<th>Active Number</th>
+																	<th>BAN</th>
+																	<th>SIM No.</th>
+																	<th>Plan</th>
+																	<th>Features</th>
+																	<th>Port-in No.</th>
+																	<th>Activation Date</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>0002923</td>
+																	<td>2029</td>
+																	<td>0909</td>
+																	<td>2GB</td>
+																	<td>Intl. Calling</td>
+																	<td>2232</td>
+																	<td>Jan. 15, 2019</td>
+																	<td></td>
+																</tr>
+																<tr>
+																	<td>0002923</td>
+																	<td>2029</td>
+																	<td>0909</td>
+																	<td>2GB</td>
+																	<td>Intl. Calling</td>
+																	<td>2232</td>
+																	<td>Jan. 15, 2019</td>
+																	<td></td>
+																</tr>
+																<tr>
+																	<td>0002923</td>
+																	<td>2029</td>
+																	<td>0909</td>
+																	<td>2GB</td>
+																	<td>Intl. Calling</td>
+																	<td>2232</td>
+																	<td>Jan. 15, 2019</td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+														<hr> </div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<h3 class="mini-header"><i class="fa fa-circle"></i> Closed Lines</h3> </div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<table id="active-pending-lines" class="table table-striped table-bordered table-hover">
+															<thead>
+																<tr>
+																	<th>Active Number</th>
+																	<th>BAN</th>
+																	<th>SIM No.</th>
+																	<th>Plan</th>
+																	<th>Features</th>
+																	<th>Port-in No.</th>
+																	<th>Activation Date</th>
+																	<th>Close Date</th>
+																</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="tab-2" class="tab-pane">
+											<div class="panel-body">
+												<form>
+													<div class="row">
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>First Name</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Last Name</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Address Line 1</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Address Line 2</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Country</label>
+																<select class="form-control">
+																	<option>Albania</option>
+																	<option>Russia</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>City</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>State</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Zip</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+													</div>
+													<hr>
+													<div class="col-lg-1 col-lg-offset-11 no-padding">
+														<div class="form-group">
+															<input type="submit" class="btn btn-primary" value="UPDATE"> </div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div id="tab-3" class="tab-pane">
+											<div class="panel-body">
+												<form>
+													<div class="row">
+														<div class="col-lg-12">
+															<hr>
+															<h3 class="mini-header"><i class="fa fa-circle"></i> Credits</h3> </div>
+													</div>
+													<div class="row">
+														<div class="col-lg-3">
+															<div class="form-group"> Total Amount Due This Month: <b>$37.50</b> </div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-12">
+															<div class="form-group">
+																<label class="field-label">Manual Payment</label>
+																<input type="text" class="form-control field-sm pull-left" placeholder="$0.00">
+																<button type="button" class="btn btn-primary btn-custom-sm">Go</button>
+															</div>
+														</div>
+														<hr> </div>
+													<div class="row">
+														<div class="col-lg-4">
+															<label class="field-label">Custom Charge (instantly charges card on file)</label>
+															<select class="form-control field-sm pull-left">
+																<option>Option 1</option>
+																<option>Option 2</option>
+															</select>
+															<input type="text" class="form-control field-sm pull-left" placeholder="$0.00">
+															<input type="text" class="form-control field-md pull-left" placeholder="Description">
+															<button type="button" class="btn btn-primary btn-custom-sm">Go</button>
+														</div>
+														<div class="col-lg-4">
+															<label class="field-label">Custom Invoice (adds the amount/descripon below on upcoming invoice)</label>
+															<select class="form-control field-sm pull-left">
+																<option>Option 1</option>
+																<option>Option 2</option>
+															</select>
+															<input type="text" class="form-control field-sm pull-left" placeholder="$0.00">
+															<input type="text" class="form-control field-md pull-left" placeholder="Description">
+															<button type="button" class="btn btn-primary btn-custom-sm">Go</button>
+														</div>
+														<div class="col-lg-4">
+															<label class="field-label">Account Credit (applies credit against account balance)</label>
+															<select class="form-control field-sm pull-left">
+																<option>Option 1</option>
+																<option>Option 2</option>
+															</select>
+															<input type="text" class="form-control field-sm pull-left" placeholder="$0.00">
+															<input type="text" class="form-control field-md pull-left" placeholder="Description">
+															<button type="button" class="btn btn-primary btn-custom-sm">Go</button>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-12">
+															<hr> </div>
+													</div>
+													<div class="row">
+														<div class="origin">
+															<div class="col-lg-2">
+																<div class="form-group">
+																	<label>Payment Method</label>
+																	<select class="form-control">
+																		<option>Credit Card</option>
+																		<option>Paypal</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-lg-2">
+																<div class="form-group">
+																	<label>Card No.</label>
+																	<input type="text" class="form-control"> </div>
+															</div>
+															<div class="col-lg-2">
+																<div class="form-group">
+																	<label>Expiry Date</label>
+																	<div class="form-group" id="data_4">
+																		<div class="input-group date"> <span class="input-group-addon" style=""><i class="fa fa-calendar"></i></span>
+																			<input class="form-control" type="text"> </div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-1">
+																<div class="form-group">
+																	<label>CVV</label>
+																	<input type="text" class="form-control"> </div>
+															</div>
+															<div class="col-lg-1 col-remove-method">
+																<div class="form-group">
+																	<label class="invisible">Remove Column</label>
+																	<button type="button" class="btn btn-danger btn-remove-method"><i class="fa fa-trash"></i></button>
+																</div>
+															</div>
+														</div>
+														<div class="col-lg-1">
+															<div class="form-group">
+																<label class="invisible">Add Column</label>
+																<button type="button" class="btn btn-default btn-add-method"><i class="fa fa-plus"></i></button>
+															</div>
+														</div>
+													</div>
+													<div class="additional-methods"></div>
+													<div class="row">
+														<div class="col-lg-12">
+															<hr>
+															<h3 class="mini-header"><i class="fa fa-circle"></i> Billing Address Details</h3> </div>
+													</div>
+													<div class="row">
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>First Name</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Last Name</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>Company</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>Primary Contact No.</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>Alternate Contact No.</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Address Line 1</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-3">
+															<div class="form-group">
+																<label>Address Line 2</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>Country</label>
+																<select class="form-control">
+																	<option>Albania</option>
+																	<option>Russia</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>City</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-2">
+															<div class="form-group">
+																<label>State</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-1">
+															<div class="form-group">
+																<label>Zip</label>
+																<input type="text" class="form-control"> </div>
+														</div>
+														<div class="col-lg-1">
+															<div class="form-group">
+																<label>Auto-Pay</label>
+																<input type="checkbox" class="js-switch" checked /> </div>
+														</div>
+													</div>
+													<hr>
+													<div class="col-lg-1 col-lg-offset-11 no-padding">
+														<div class="form-group">
+															<input type="submit" class="btn btn-primary" value="UPDATE"> </div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div id="tab-4" class="tab-pane">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-lg-12">
+														<h3 class="mini-header"><i class="fa fa-circle"></i> Billing History</h3> </div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<table id="billing-history" class="table table-striped table-bordered table-hover">
+															<thead>
+																<tr>
+																	<th>Date</th>
+																	<th>Type</th>
+																	<th>Amount</th>
+																	<th>Notes</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>2018-10-10</td>
+																	<td>Credit</td>
+																	<td>$10</td>
+																	<td>Service Credit</td>
+																</tr>
+																<tr>
+																	<td>2018-10-10</td>
+																	<td>Credit</td>
+																	<td>$10</td>
+																	<td>Service Credit</td>
+																</tr>
+																<tr>
+																	<td>2018-10-10</td>
+																	<td>Credit</td>
+																	<td>$10</td>
+																	<td>Service Credit</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<h3 class="mini-header"><i class="fa fa-circle"></i> USAePay Transactions</h3> </div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<table id="usaepay-table" class="table table-striped table-bordered table-hover">
+															<thead>
+																<tr>
+																	<th>Date</th>
+																	<th>Transaction No.</th>
+																	<th>Customer No.</th>
+																	<th>USAePay Ref. No.</th>
+																	<th>CC Last 4 Digit</th>
+																	<th>Total</th>
+																	<th>Refunds Issued</th>
+																	<th>Status</th>
+																	<th>Action</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>2018-10-10</td>
+																	<td>001</td>
+																	<td>1002</td>
+																	<td>44523</td>
+																	<td>0023</td>
+																	<td>$100</td>
+																	<td> - </td>
+																	<td>Success</td>
+																	<td width="100" class="table-col-center">
+																		<div class="btn-group">
+																			<button data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle btn-no-margin" aria-expanded="false">Action <span class="caret"></span></button>
+																			<ul class="dropdown-menu">
+																				<li><a href="#">Refund</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="tab-5" class="tab-pane">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="mail-box-header" style="padding-top: 0;">
+															<div class="mail-tools tooltip-demo m-t-md">
+																<button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button> <a href="compose.html" class="btn btn-primary">Compose</a> </div>
+														</div>
+														<div class="mail-box">
+															<table class="table table-hover table-mail">
+																<tbody>
+																	<tr class="unread">
+																		<td class="check-mail">
+																			<div class="icheckbox_square-green" style="position: relative;">
+																				<input class="i-checks" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+																		</td>
+																		<td class="mail-ontact">Anna Smith</td>
+																		<td class="mail-subject">Lorem ipsum dolor noretek imit set.</td>
+																		<td class=""><i class="fa fa-paperclip"></i></td>
+																		<td class="text-right mail-date">6.10 AM</td>
+																		<td>
+																			<button id="showmore1" class="btn btn-primary btn-xs">Show More</button>
+																		</td>
+																	</tr>
+																	<tr id="msg1">
+																		<td colspan="6">
+																			<div class="ibox-content">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="mail-box-header">
+																							<h2>																			View Message																		</h2>
+																							<div class="mail-tools tooltip-demo m-t-md">
+																								<h3>																				<span class="font-normal">Subject: </span>Season 8 Trailer																			</h3>
+																								<h5>																				<span class="pull-right font-normal">10:15AM 02 FEB 2014</span>																				<span class="font-normal">From: </span>johnsnow@got.com																			</h5> </div>
+																						</div>
+																						<div class="mail-box">
+																							<div class="mail-body">
+																								<p> Hello John Wick!
+																									<br>
+																									<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																								<p> It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+																								<p> There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of. </p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr class="unread">
+																		<td class="check-mail">
+																			<div class="icheckbox_square-green checked" style="position: relative;">
+																				<input class="i-checks" checked="" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+																		</td>
+																		<td class="mail-ontact">Jack Nowak</td>
+																		<td class="mail-subject">Aldus PageMaker including versions of Lorem Ipsum.</td>
+																		<td class=""></td>
+																		<td class="text-right mail-date">8.22 PM</td>
+																		<td>
+																			<button id="showmore2" class="btn btn-primary btn-xs">Show More</button>
+																		</td>
+																	</tr>
+																	<tr id="msg2">
+																		<td colspan="6">
+																			<div class="ibox-content">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="mail-box-header">
+																							<h2>																			View Message																		</h2>
+																							<div class="mail-tools tooltip-demo m-t-md">
+																								<h3>																				<span class="font-normal">Subject: </span>Season 8 Trailer																			</h3>
+																								<h5>																				<span class="pull-right font-normal">10:15AM 02 FEB 2014</span>																				<span class="font-normal">From: </span>johnsnow@got.com																			</h5> </div>
+																						</div>
+																						<div class="mail-box">
+																							<div class="mail-body">
+																								<p> Hello John Wick!
+																									<br>
+																									<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																								<p> It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+																								<p> There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of. </p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr class="read">
+																		<td class="check-mail">
+																			<div class="icheckbox_square-green" style="position: relative;">
+																				<input class="i-checks" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+																		</td>
+																		<td class="mail-ontact">Alex T.<span class="label label-danger pull-right">Documents</span></td>
+																		<td class="mail-subject">Lorem ipsum dolor noretek imit set.</td>
+																		<td class=""><i class="fa fa-paperclip"></i></td>
+																		<td class="text-right mail-date">December 22</td>
+																		<td>
+																			<button id="showmore3" class="btn btn-primary btn-xs">Show More</button>
+																		</td>
+																	</tr>
+																	<tr id="msg3">
+																		<td colspan="6">
+																			<div class="ibox-content">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="mail-box-header">
+																							<h2>																			View Message																		</h2>
+																							<div class="mail-tools tooltip-demo m-t-md">
+																								<h3>																				<span class="font-normal">Subject: </span>Season 8 Trailer																			</h3>
+																								<h5>																				<span class="pull-right font-normal">10:15AM 02 FEB 2014</span>																				<span class="font-normal">From: </span>johnsnow@got.com																			</h5> </div>
+																						</div>
+																						<div class="mail-box">
+																							<div class="mail-body">
+																								<p> Hello John Wick!
+																									<br>
+																									<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																								<p> It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+																								<p> There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of. </p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr class="read">
+																		<td class="check-mail">
+																			<div class="icheckbox_square-green" style="position: relative;">
+																				<input class="i-checks" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+																		</td>
+																		<td class="mail-ontact">Patrick Pertners <span class="label label-info pull-right">Adv</span></td>
+																		<td class="mail-subject">If you are going to use a passage of Lorem </td>
+																		<td class=""></td>
+																		<td class="text-right mail-date">May 28</td>
+																		<td>
+																			<button id="showmore4" class="btn btn-primary btn-xs">Show More</button>
+																		</td>
+																	</tr>
+																	<tr id="msg4">
+																		<td colspan="6">
+																			<div class="ibox-content">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="mail-box-header">
+																							<h2>																			View Message																		</h2>
+																							<div class="mail-tools tooltip-demo m-t-md">
+																								<h3>																				<span class="font-normal">Subject: </span>Season 8 Trailer																			</h3>
+																								<h5>																				<span class="pull-right font-normal">10:15AM 02 FEB 2014</span>																				<span class="font-normal">From: </span>johnsnow@got.com																			</h5> </div>
+																						</div>
+																						<div class="mail-box">
+																							<div class="mail-body">
+																								<p> Hello John Wick!
+																									<br>
+																									<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																								<p> It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+																								<p> There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of. </p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr class="read">
+																		<td class="check-mail">
+																			<div class="icheckbox_square-green" style="position: relative;">
+																				<input class="i-checks" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+																		</td>
+																		<td class="mail-ontact">Sandra Derick</td>
+																		<td class="mail-subject">Contrary to popular belief</td>
+																		<td class=""></td>
+																		<td class="text-right mail-date">May 28</td>
+																		<td>
+																			<button id="showmore5" class="btn btn-primary btn-xs">Show More</button>
+																		</td>
+																	</tr>
+																	<tr id="msg5">
+																		<td colspan="6">
+																			<div class="ibox-content">
+																				<div class="row">
+																					<div class="col-lg-12">
+																						<div class="mail-box-header">
+																							<h2>																			View Message																		</h2>
+																							<div class="mail-tools tooltip-demo m-t-md">
+																								<h3>																				<span class="font-normal">Subject: </span>Season 8 Trailer																			</h3>
+																								<h5>																				<span class="pull-right font-normal">10:15AM 02 FEB 2014</span>																				<span class="font-normal">From: </span>johnsnow@got.com																			</h5> </div>
+																						</div>
+																						<div class="mail-box">
+																							<div class="mail-body">
+																								<p> Hello John Wick!
+																									<br>
+																									<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+																								<p> It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+																								<p> There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of. </p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12 margin-md-top">
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5>Notes</h5>
+										<br> <a href="#" class="btn btn-primary">New Note</a> </div>
+									<div class="ibox-content">
+										<div class="row">
+											<div class="col-lg-12">
+												<table class="table table-striped table-bordered table-hover">
+													<thead>
+														<tr>
+															<th>Agent</th>
+															<th>Date</th>
+															<th>Time</th>
+															<th>Note</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Macky Miro</td>
+															<td>2018-10-10</td>
+															<td>18:55</td>
+															<td>Lorem Ipsom</td>
+														</tr>
+														<tr>
+															<td>Macky Miro</td>
+															<td>2018-10-10</td>
+															<td>18:55</td>
+															<td>Lorem Ipsom</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END PAGE CONTENT -->
+				</div>
+			</div>
+			<div class="clone">
+				<div class="clone-data">
+					<div class="col-lg-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>TBC Data</h5> </div>
+							<div class="ibox-content ibox-info">
+								<div class="row">
+									<div class="col-lg-6"><b>Last Successful Pull Date:</b> Jan. 18, 2018 17:50:25</div>
+									<div class="col-lg-6"><b>Error:</b> N/A</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6"><b>Account Number:</b> 9928238283</div>
+									<div class="col-lg-6"><b>Corporate Node:</b> 9928238283</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>Rate Plan Name:</b> BIZ FM UTT+6GB for 4 lines</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>Included Services (list):</b></div>
+									<div class="col-lg-12"> Scam Block
+										<br> Scam ID
+										<br> BIZ SC 6GB Data &amp; SMHS
+										<br> N.America Block Intl T+T+D SUB
+										<br> Data Stash Identifier GSM
+										<br> Block Content SUB </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>Monthly Charges:</b></div>
+									<div class="col-lg-12"> $45.0 </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>SIM:</b></div>
+									<div class="col-lg-12"> 89012345776353411F </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>IMEI:</b></div>
+									<div class="col-lg-12"> 0145678875443 </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>IMEI:</b></div>
+									<div class="col-lg-12"> 0145678875443 </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"><b>Status:</b></div>
+									<div class="col-lg-12"> ACTIVE </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<hr>
+										<button type="button" class="btn btn-primary pull-right btn-edit">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Line Data</h5> </div>
+							<div class="ibox-content ibox-line-data">
+								<div class="row">
+									<div class="col-lg-4"><b>Active Number:</b> 2232-223-22</div>
+									<div class="col-lg-4"><b>SIM Number:</b> 2232332323123</div>
+									<div class="col-lg-4"><b>IMEI:</b> 22293929323</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<label><b>BAN:</b></label>
+										<input id="ban" disabled="disabled" type="text" name="ban" style="width:60%;" class="form-control" /> </div>
+									<div class="col-lg-4"> <b>SIM Type:</b>
+										<select id="simType" disabled="disabled" class="form-control">
+											<option value="Standard">Standard</option>
+											<option value="Micro">Micro</option>
+											<option value="Nano">Nano</option>
+										</select>
+									</div>
+									<div class="col-lg-4"> <b>Phone Type:</b>
+										<select id="phoneType" disabled="disabled" class="form-control">
+											<option value="Android">Android</option>
+											<option value="iOS">iOS</option>
+											<option value="Blacberry">Blacberry</option>
+											<option value="Windows">Windows</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<hr>
+										<button type="button" class="btn btn-primary pull-right btn-save">Save</button>
+										<button type="button" id="editLineData" class="btn btn-primary pull-right btn-edit">Edit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Blocks</h5> </div>
+							<div class="ibox-content ibox-blocks-data">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label>State Side Intl. Calling: </label>
+											<input type="checkbox" class="js-switch1" checked /> </div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label>Intl. Roaming: </label>
+											<input type="checkbox" class="js-switch2" checked /> </div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label>Content: </label>
+											<input type="checkbox" class="js-switch3" checked /> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Actions</h5> </div>
+							<div class="ibox-content">
+								<div class="row">
+									<div class="col-lg-3">
+										<button type="button" class="btn btn-primary btn-action-ibox">Port</button>
+									</div>
+									<div class="col-lg-3">
+										<button type="button" class="btn btn-primary btn-action-ibox">Change Plan</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Audit Trail</h5> </div>
+							<div class="ibox-content">
+								<div class="row">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Process</th>
+												<th>Detail</th>
+												<th>Description</th>
+												<th>Date</th>
+												<th>Host</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>IMEI</td>
+												<td>Transcon Logistics LLC-AT&amp;T-GPRS/LTE/SMS MO/MT US</td>
+												<td>3558540504589806</td>
+												<td>Mar 07, 2018 11:32 am</td>
+												<td>BatchUser</td>
+												<td>Executed</td>
+											</tr>
+											<tr>
+												<td>IMEI</td>
+												<td>Transcon Logistics LLC-AT&amp;T-GPRS/LTE/SMS MO/MT US</td>
+												<td>3558540504589806</td>
+												<td>Mar 07, 2018 11:32 am</td>
+												<td>BatchUser</td>
+												<td>Executed</td>
+											</tr>
+											<tr>
+												<td>IMEI</td>
+												<td>Transcon Logistics LLC-AT&amp;T-GPRS/LTE/SMS MO/MT US</td>
+												<td>3558540504589806</td>
+												<td>Mar 07, 2018 11:32 am</td>
+												<td>BatchUser</td>
+												<td>Executed</td>
+											</tr>
+											<tr>
+												<td>IMEI</td>
+												<td>Transcon Logistics LLC-AT&amp;T-GPRS/LTE/SMS MO/MT US</td>
+												<td>3558540504589806</td>
+												<td>Mar 07, 2018 11:32 am</td>
+												<td>BatchUser</td>
+												<td>Executed</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade edit-profile-modal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Edit Profile</h4> </div>
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label>First Name</label>
+										<input type="text" class="form-control"> </div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label>Last Name</label>
+										<input type="text" class="form-control"> </div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label>Company</label>
+										<input type="text" class="form-control"> </div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label>E-mail</label>
+										<input type="text" class="form-control"> </div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label>PIN</label>
+										<input type="text" class="form-control"> </div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Update</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Mainly scripts -->
+			<script src="js/jquery-2.1.1.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+			<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+			<!-- Custom and plugin javascript -->
+			<script src="js/inspinia.js"></script>
+			<script src="js/plugins/pace/pace.min.js"></script>
+			<!-- Plugins -->
+			<script src="js/plugins/dataTables/datatables.min.js"></script>
+			<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+			<script src="js/plugins/switchery/switchery.js"></script>
+			<script type="text/javascript" src="js/custom.js"></script>
+			<script>
+				function format(d) {
+					var content = $('.clone').html();
+					return content;
+				}
+				$(window).on('load', function() {
+							var elem = document.querySelector('.js-switch');
+							var init = new Switchery(elem);
+							var table_apl = $('#active-pending-lines').DataTable({
+								pageLength: 25,
+								responsive: true,
+								dom: '<"html5buttons"B>lTfgitp',
+								buttons: [{
+									extend: 'copy'
+								}, {
+									extend: 'csv'
+								}, {
+									extend: 'excel',
+									title: 'ExampleFile'
+								}, {
+									extend: 'pdf',
+									title: 'ExampleFile'
+								}, {
+									extend: 'print',
+									customize: function(win) {
+										$(win.document.body).addClass('white-bg');
+										$(win.document.body).css('font-size', '10px');
+										$(win.document.body).find('table').addClass('compact').css('font-size', 'inherit');
+									}
+								}],
+								"columnDefs": [{
+									"targets": 7,
+									"className": 'details-control',
+									"orderable": false,
+									"data": null,
+									"defaultContent": '',
+									"render": function() {
+										return '<button type="button" class="btn btn-primary btn-xs">More <i class="fa fa-angle-down" aria-hidden="true"></i></button>';
+									}
+								}]
+							});
+							$('#active-pending-lines tbody').on('click', 'td.details-control', function() {
+										var tr = $(this).closest('tr');
+										var tdi = tr.find("i.fa");
+										var row = table_apl.row(tr);
+										if (row.child.isShown()) { // This row is already open - close it                           row.child.hide();                           tr.removeClass('shown');                           tdi.first().removeClass('fa-angle-up');                           tdi.first().addClass('fa-angle-down');                       }else{                           // Open this row                           row.child(format(row.data())).show();                           tr.addClass('shown');                           tdi.first().removeClass('fa-angle-down');                           tdi.first().addClass('fa-angle-up');                           $('.clone-data').parents('tr').addClass('clone-row');                  		var elem1 = document.querySelector('.js-switch1');                  		var elem2 = document.querySelector('.js-switch2');                  		var elem3 = document.querySelector('.js-switch3');                  		var init = new Switchery(elem1);                  		var init = new Switchery(elem2);                  		var init = new Switchery(elem3);								$("#editLineData").click(function(){					$("#ban").prop("disabled", false);					$("#simType").prop("disabled", false);					$("#phoneType").prop("disabled", false);				});                                }                   });         			$("#msg1").hide();			$("#msg2").hide();			$("#msg3").hide();			$("#msg4").hide();			$("#msg5").hide();						$("#showmore1").click(function(){				$("#msg1").toggle();			});						$("#showmore2").click(function(){				$("#msg3").toggle();			});						$("#showmore3").click(function(){				$("#msg3").toggle();			});						$("#showmore4").click(function(){				$("#msg4").toggle();			});						$("#showmore5").click(function(){				$("#msg5").toggle();			});                           });
+			</script>
+		</body>
+
+</html>
